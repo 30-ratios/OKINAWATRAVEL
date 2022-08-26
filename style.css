@@ -1,0 +1,183 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Hiragino Sans W3", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  background-color: #f0f8ff;
+}
+
+header {
+  height: 60px;
+  width: 100vw;
+  padding: 0px 15px;
+  background-color: #f1f1f1;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  display: flex;
+}
+
+.logo {
+  font-size: 25px;
+}
+
+nav {
+  margin: 0 0 0 auto;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+  display: block;
+  line-height: 60px;
+  padding: 0 20px;
+  position: relative;
+}
+
+/*▽▽ヘッダーリストのアンダーバー▽▽*/
+li ::after {
+  position: absolute; /*親要素であるaタグを基準に位置を指定*/
+  bottom: 10px; /*アンダーバーが位置する、各リストの下端からの高さ*/
+  left: 0;/*アンダーバーを各リストの左端に指定*/
+  content: ''; /*本来は、擬似要素に入るテキストなどを’’内に指定。今回はアンダーバーなので何も記載しない*/
+  width: 100%; /*アンダーバーの幅は各リストの幅*/
+  height: 2px; /*アンダーバーの高さ（太さ）*/
+  background: #000000; /*アンダーバーの色*/
+  transform: scale(0, 1);/*アンダーバーの縮尺比率。ホバー前はx方向に0*/
+  transform-origin: center top;/*変形（アンダーバーの伸長）の原点を、liの真ん中指定*/
+  transition: transform 0.75s;/*変形の時間*/
+}
+
+li :hover::after {
+  transform: scale(1, 1); /*ホバー後、x軸方向に1（相対値）伸長*/
+}
+/*△△ヘッダーリストのアンダーバー△△*/
+
+#logo{
+  height:100%;
+}
+
+#chirashi{
+width:100vw;
+}
+
+h1 {
+  position: relative;
+  padding: 0.5em;
+  background: #a6d3c8;
+  color: white;
+}
+
+h1::before {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 0;
+  border: none;
+  border-bottom: solid 15px transparent;
+  border-right: solid 20px rgb(149, 158, 155);
+}
+
+
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.25;
+}
+table {
+  border-collapse: collapse;
+  margin: 0 auto;
+  padding: 0;
+  width: 850px;
+  table-layout: fixed;
+}
+
+table tr {
+  background-color: #fff;
+  padding: .35em;
+  border: 2px solid #eee;
+}
+table tr:last-child{
+  border: none;
+}
+table th{
+  padding: 2em;
+  border-right: 2px solid #fff;
+}
+table td {
+  padding: 2em .5em;
+  border-right: 2px solid #eee;
+  text-align: center;
+}
+table th {
+  font-size: .85em;
+}
+table thead tr{
+  background-color: #50535d;
+  color:#fff;
+}
+table tbody th {
+    border-right: 2px solid #eee;
+}
+th.non {
+    border-right: none;
+}
+.txt{
+   text-align: left;
+   font-size: .85em;
+}
+.price{
+  color: #000;
+  font-weight: bold;
+  font-size:1.3em
+}
+.price span {
+    font-size: .6em;
+}
+.red_bk{
+  background:#e81010
+}
+.red-txt{
+  color:#e81010
+}
+.btn{
+  background:#e81010;
+  border: 2px solid #e81010;
+  color:#fff;
+  padding: 1em;
+  border-radius:20px;
+  display:block;
+  text-decoration:none;
+  font-size:.8em
+}
+.btn:hover{
+  background: #fff;
+  border: 2px solid #e81010;
+  color: #e81010;
+  transition: .2s;
+}
+table .btnarea td {
+  padding: .2em .5em;
+  border-right:none
+}
+@media screen and (max-width: 600px) {
+  .wrap{
+     overflow-x: scroll;
+  }
+}
+
+#map1{
+  width:100vw;
+}
+
+html{
+  scroll-behavior: smooth;
+}
